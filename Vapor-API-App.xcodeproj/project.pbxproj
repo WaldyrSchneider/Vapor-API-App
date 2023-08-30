@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		42B210702A9E8069006A83CA /* Vapor_API_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2106F2A9E8069006A83CA /* Vapor_API_AppApp.swift */; };
-		42B210722A9E8069006A83CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B210712A9E8069006A83CA /* ContentView.swift */; };
+		42B210722A9E8069006A83CA /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B210712A9E8069006A83CA /* SongList.swift */; };
 		42B210742A9E806A006A83CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B210732A9E806A006A83CA /* Assets.xcassets */; };
 		42B210772A9E806A006A83CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B210762A9E806A006A83CA /* Preview Assets.xcassets */; };
+		42B210812A9E80F4006A83CA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B210802A9E80F4006A83CA /* Song.swift */; };
+		42B210832A9E8147006A83CA /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B210822A9E8147006A83CA /* SongListViewModel.swift */; };
+		42B210862A9E8262006A83CA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B210852A9E8262006A83CA /* HttpClient.swift */; };
+		42B210882A9E83B6006A83CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B210872A9E83B6006A83CA /* Constants.swift */; };
+		42B2108A2A9ED4B6006A83CA /* ModalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B210892A9ED4B6006A83CA /* ModalType.swift */; };
+		42B2108C2A9FAEB6006A83CA /* AddUpdateSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2108B2A9FAEB6006A83CA /* AddUpdateSong.swift */; };
+		42B2108E2A9FAEFA006A83CA /* AddUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2108D2A9FAEFA006A83CA /* AddUpdateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42B2106C2A9E8069006A83CA /* Vapor-API-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vapor-API-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B2106F2A9E8069006A83CA /* Vapor_API_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vapor_API_AppApp.swift; sourceTree = "<group>"; };
-		42B210712A9E8069006A83CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		42B210712A9E8069006A83CA /* SongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
 		42B210732A9E806A006A83CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42B210762A9E806A006A83CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		42B210802A9E80F4006A83CA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		42B210822A9E8147006A83CA /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		42B210852A9E8262006A83CA /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		42B210872A9E83B6006A83CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		42B210892A9ED4B6006A83CA /* ModalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalType.swift; sourceTree = "<group>"; };
+		42B2108B2A9FAEB6006A83CA /* AddUpdateSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateSong.swift; sourceTree = "<group>"; };
+		42B2108D2A9FAEFA006A83CA /* AddUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,11 @@
 		42B2106E2A9E8069006A83CA /* Vapor-API-App */ = {
 			isa = PBXGroup;
 			children = (
+				42B210842A9E8251006A83CA /* Utilities */,
+				42B2107F2A9E807D006A83CA /* ViewModel */,
+				42B2107E2A9E8078006A83CA /* View */,
+				42B2107D2A9E8072006A83CA /* Model */,
 				42B2106F2A9E8069006A83CA /* Vapor_API_AppApp.swift */,
-				42B210712A9E8069006A83CA /* ContentView.swift */,
 				42B210732A9E806A006A83CA /* Assets.xcassets */,
 				42B210752A9E806A006A83CA /* Preview Content */,
 			);
@@ -65,6 +82,42 @@
 				42B210762A9E806A006A83CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		42B2107D2A9E8072006A83CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42B210802A9E80F4006A83CA /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42B2107E2A9E8078006A83CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42B2108B2A9FAEB6006A83CA /* AddUpdateSong.swift */,
+				42B210712A9E8069006A83CA /* SongList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42B2107F2A9E807D006A83CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42B210822A9E8147006A83CA /* SongListViewModel.swift */,
+				42B2108D2A9FAEFA006A83CA /* AddUpdateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		42B210842A9E8251006A83CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				42B210852A9E8262006A83CA /* HttpClient.swift */,
+				42B210872A9E83B6006A83CA /* Constants.swift */,
+				42B210892A9ED4B6006A83CA /* ModalType.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B210722A9E8069006A83CA /* ContentView.swift in Sources */,
+				42B210862A9E8262006A83CA /* HttpClient.swift in Sources */,
+				42B2108C2A9FAEB6006A83CA /* AddUpdateSong.swift in Sources */,
+				42B210812A9E80F4006A83CA /* Song.swift in Sources */,
+				42B210832A9E8147006A83CA /* SongListViewModel.swift in Sources */,
+				42B210722A9E8069006A83CA /* SongList.swift in Sources */,
+				42B2108A2A9ED4B6006A83CA /* ModalType.swift in Sources */,
 				42B210702A9E8069006A83CA /* Vapor_API_AppApp.swift in Sources */,
+				42B210882A9E83B6006A83CA /* Constants.swift in Sources */,
+				42B2108E2A9FAEFA006A83CA /* AddUpdateViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
